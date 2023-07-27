@@ -1,0 +1,92 @@
+{
+    "plugins": [
+        "cypress"
+    ],
+    "env": {
+      "cypress/globals": true
+    },
+    "extends": [
+        "plugin:cypress/recommended"
+    ],
+    "rules": {
+        "indent": ["error", 2],
+        "newline-per-chained-call": 2,
+        "comma-spacing": [
+            "error",
+            {
+                "before": false,
+                "after": true
+            }
+        ],
+        "no-trailing-spaces": "error",
+        "padding-line-between-statements": [
+            "error",
+            {
+                "blankLine": "always",
+                "prev": "var",
+                "next": "return"
+            }
+        ],
+        "lines-between-class-members": [
+            "error",
+            "always",
+            {
+                "exceptAfterSingleLine": true
+            }
+        ],
+        "no-multiple-empty-lines": "error",
+        "eol-last": [
+            "error",
+            "always"
+        ],
+        "curly": "error",
+        "brace-style": "error",
+        "space-before-function-paren": ["error", {
+            "anonymous": "never",
+            "named": "always",
+            "asyncArrow": "always"
+        }],
+        "keyword-spacing": [
+            "error",
+            {
+                "before": true,
+                "after": true
+            }
+        ],
+        "arrow-spacing": [
+            "error",
+            {
+                "before": true,
+                "after": true
+            }
+        ],
+        "space-before-blocks": "error",
+        "max-len": [
+            "error",
+            {
+                "code": 120
+            }
+        ],
+        "space-in-parens": [
+            "error",
+            "never"
+        ],
+        "cypress/unsafe-to-chain-command": "warn",
+        "space-infix-ops": "error",
+        "spaced-comment": [
+            "error",
+            "always",
+            {
+                "line": {
+                    "markers": ["/"],
+                    "exceptions": ["///"]
+                }
+            }
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "prefer-const": "error"
+    }
+  }

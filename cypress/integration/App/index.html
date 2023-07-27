@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music Player</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Music Player</h1>
+      <audio id="audio" src=""></audio>
+      <div class="tabs">
+        <button
+            class="tab-btn active"
+            onclick="openTab('playlistTab')"
+        >Playlist</button>
+        <button
+            class="tab-btn"
+            onclick="openTab('recentlyPlayedTab')"
+        >Recently Played</button>
+      </div>
+      <div id="playlistTab" class="tab-content active">
+        <h2>Playlist</h2>
+          <ul id="playlist">
+              <li
+                class="active-song"
+                data-src="https://dl.sndup.net/spts/Super%20rai%20morale.mp3"
+              >Song 1</li>
+              <li
+                data-src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/NF%20-%20Let%20You%20Down.mp3"
+              >Song 2</li>
+              <li
+                data-src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/308622/Marshmello%20-%20Silence%20ft.%20Khalid.mp3"
+              >Song 3</li>
+              <li
+                data-src="https://www.xclusivepop.com/wp-content/uploads/2021/05/Dax_-_Dear_Mom.mp3"
+              >Song 4</li>
+          </ul>
+      </div>
+      <div id="recentlyPlayedTab" class="tab-content">
+        <h2>Recently Played Songs</h2>
+        <ul id="recentlyPlayed"></ul>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="index.js"></script>
+</html>
