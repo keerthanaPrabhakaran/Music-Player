@@ -1,10 +1,9 @@
 const audio = document.getElementById('audio');
-const li = document.querySelectorAll('#playlist li');
 const playList = document.getElementById('playlist'); // ul
 const initialCapacity = 3;
 const store = {};
 let currentSong = 0;
-const username = 'User1';
+const username = 'User1';   // For example we consider username as user1
 
 playlist.addEventListener('click', (e) => {
   if (e.target.tagName === 'LI') {
@@ -18,10 +17,10 @@ playlist.addEventListener('click', (e) => {
     }
 
     const recentlyPlayedSongs = store[username];
-    recentlyPlayedSongs.unshift(e.target.innerText);
+    recentlyPlayedSongs.unshift(e.target.innerText);  // Adds recently played songs to list
 
     if (recentlyPlayedSongs.length > initialCapacity) {
-      recentlyPlayedSongs.splice(initialCapacity);
+      recentlyPlayedSongs.splice(initialCapacity);  // Eliminate the least recently played songs when the store is full
     }
 
     displayRecentlyPlayed();
@@ -32,12 +31,11 @@ function displayRecentlyPlayed () {
   const recentlyPlayedElement = document.getElementById('recentlyPlayed');
   recentlyPlayedElement.innerHTML = '';
 
-  const username = 'User1';
   if (store[username]) {
-    store[username].forEach((song, index) => {
+    store[username].forEach((song) => {
       const listItem = document.createElement('li');
       listItem.innerText = `${song}`;
-      recentlyPlayedElement.appendChild(listItem);
+      recentlyPlayedElement.appendChild(listItem); // Appending list of songs played in recent played songs tab
     });
   }
 }
@@ -72,3 +70,7 @@ const setActiveSong = (index) => {
   const activeSong = playlist.querySelectorAll('li')[index];
   activeSong.classList.add('active-song');
 };
+
+function pauseAudio () {
+  audio.pause(); // Pause the current audio
+}

@@ -1,7 +1,13 @@
 ## Music Player
 To run the web page
-1. Go to Integration --> App
-2. Click on index.html file then the file will be opening in your default browser
+--> Go to Integration --> App
+--> Click on index.html file then the file will be opening in your default browser
+
+## Working
+--> Basic music player consists of list of songs
+--> Contains playlist tab and recently played list tab
+--> Songs that have been played recent;y will be added to recently played songs list
+--> Common pause button have been included for pausing audio purposes only.
 
 ## Cypress Automated E2E Testing
 

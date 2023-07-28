@@ -2,6 +2,11 @@
     "initialCapacity": "3",
     "capacity": "4",
     "playlist": "Playlist",
-    "recentlyPlayed": "Recently Played"
+    "recentlyPlayed": "Recently Played",
+    "songList": [
+        "Song 4",
+        "Song 3",
+        "Song 2"
+    ]
 }
   
