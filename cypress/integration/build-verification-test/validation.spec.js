@@ -32,7 +32,7 @@ context('Music Player Validation', () => {
       url: active_url,
       followRedirect: false, // turn off following redirects
     }).then((resp) => {
-      // redirect status code is 200
+      // redirect status code is 302
       expect(resp.status).to.eq(302)
     })
       .as('DOM content loaded successfully')
